@@ -61,7 +61,7 @@ can_i_deploy:
 	@"${PACT_CLI}" broker can-i-deploy \
 	  --pacticipant ${PACTICIPANT} \
 	  --version ${GIT_COMMIT} \
-	  --to-environment production \
+	  --to-environment prod \
 	  --retry-while-unknown 0 \
 	  --retry-interval 10
 
@@ -71,7 +71,7 @@ deploy_app:
 
 record_deployment:
 
-	@"${PACT_CLI}" broker record-deployment --pacticipant ${PACTICIPANT} --version ${GIT_COMMIT} --environment production
+	@"${PACT_CLI}" broker record-deployment --pacticipant ${PACTICIPANT} --version ${GIT_COMMIT} --environment prod
 
 ## =====================
 ## Pactflow set up tasks
